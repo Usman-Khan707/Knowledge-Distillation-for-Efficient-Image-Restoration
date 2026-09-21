@@ -362,48 +362,6 @@ A `.csv` file containing SSIM scores for **all benchmark images** is available:
 
 ---
 
-### Project Files Access
-
-To make the project fully accessible and reproducible, we’ve shared the **entire project directory** on Google Drive.
-
-📎 [🔗 Access Full Project Folder on Drive](https://drive.google.com/drive/folders/1d_L6vDm6eD3Wsq5wNnxpDlJGa7Ylj5pY?usp=drive_link)
-
-> This includes:
-> - All Python source files (`.py`) and scripts  
-> - Trained **student models** (`.pth` files)  
-> - Pretrained **teacher model** weights (Restormer)  
-> - Outputs from **student** and **teacher** models  
-> - Full **DIV2K dataset** used in training/testing:  
->   - `/data/whole_dataset/` (original HR images)  
->   - `/data/blurry/train/train/`, `/test/`, `/benchmark/`  
->   - `/data/sharp/train/train/`, `/test/`, `/benchmark/`  
-> - Patch-based triplet dataset used in KD training  
-> - SSIM evaluation outputs (`.csv`)  
-> - External image test samples and visual comparisons  
-> - Inference outputs and logs  
-
-> This Drive folder mirrors everything used in the Colab pipeline and repository structure, including additional resources not hosted directly on GitHub due to file size limitations.
-
-**Use it to:**
-- Run or resume training/inference  
-- Review model outputs and evaluation results  
-- Explore or replicate experiments
-
----
-
-## Team & Credits
-
-**This project, focused on Image Sharpening using Knowledge Distillation, was developed as part of the  Intel® Unnati Industrial Training Program 2025**
-
-**Team Name**: `RestoraTech`
-
-| Member           | Role                          | Contribution Summary                                                                 |
-|------------------|-------------------------------|----------------------------------------------------------------------------------------|
-| **Dhruv Suthar** | Team Lead & Primary Developer | Designed and implemented the full U-Net knowledge distillation pipeline with VGG perceptual loss, handled model training, evaluation, visualization, and GitHub structuring. |
-| **Pratham Patel** | Evaluation & Dataset Lead     | Led benchmark evaluation, SSIM analysis, visual output comparisons, and managed external image testing and dataset structuring. |
-
----
-
 ## Related Work
 
 Alongside this main implementation using the **Restormer teacher**, we also explored a parallel approach using the **SwinIR-M (x4 PSNR)** model as the teacher network for knowledge distillation.
@@ -430,12 +388,5 @@ With modular loss integration (L1, KD, VGG), checkpoint-based resumable training
 - [SwinIR: Image Restoration Using Swin Transformer](https://github.com/JingyunLiang/SwinIR)
 - [PyTorch Official Documentation](https://pytorch.org/)
 - [Intel® Unnati Industrial Training Program](https://www.intel.in/content/www/in/en/corporate/unnati/industrial-training-program.html)
-
----
-
-## License
-
-This project is released under the [MIT License](./LICENSE).  
-You are free to use, modify, and distribute this for academic and research purposes. Commercial use may require additional permission.
 
 ---
